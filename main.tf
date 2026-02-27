@@ -10,3 +10,11 @@ resource "aws_instance" "my_server" {
     Name = "Terraform-Server"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "uacomedian-terraform-state" # ВСТАВ СВОЮ НАЗВУ
+    key    = "state/terraform.tfstate"
+    region = "eu-central-1"
+  }
+}
