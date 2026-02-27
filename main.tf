@@ -13,7 +13,7 @@ resource "aws_instance" "my_server" {
 
 terraform {
   backend "s3" {
-    bucket = "uacomedian-terraform-state" # ВСТАВ СВОЮ НАЗВУ
+    bucket = "vasyakimchuk-terraform-state" # Скопіюй це прямо звідси
     key    = "state/terraform.tfstate"
     region = "eu-central-1"
   }
